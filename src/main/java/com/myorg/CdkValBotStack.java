@@ -1,10 +1,11 @@
 package com.myorg;
 
-import software.constructs.Construct;
+import com.myorg.constrcuts.AsyncComputeConstructs;
+import com.myorg.constrcuts.StorageConstruct;
+import com.myorg.constrcuts.SyncComputeConstructs;
 import software.amazon.awscdk.Stack;
 import software.amazon.awscdk.StackProps;
-// import software.amazon.awscdk.Duration;
-// import software.amazon.awscdk.services.sqs.Queue;
+import software.constructs.Construct;
 
 public class CdkValBotStack extends Stack {
     public CdkValBotStack(final Construct scope, final String id) {
@@ -13,12 +14,8 @@ public class CdkValBotStack extends Stack {
 
     public CdkValBotStack(final Construct scope, final String id, final StackProps props) {
         super(scope, id, props);
-
-        // The code that defines your stack goes here
-
-        // example resource
-        // final Queue queue = Queue.Builder.create(this, "CdkValBotQueue")
-        //         .visibilityTimeout(Duration.seconds(300))
-        //         .build();
+        StorageConstruct storageConstruct = new StorageConstruct(this);
+        new SyncComputeConstructs(this, storageConstruct);
+        new AsyncComputeConstructs(this, storageConstruct);
     }
 }
