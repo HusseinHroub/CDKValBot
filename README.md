@@ -1,6 +1,19 @@
-# Welcome to your CDK Java project!
+# Welcome to Val CDK Java project!
 
-This is a blank project for CDK development with Java.
+The purpose of this project is to track Val player stats for huge scale
+
+This is meant to be executed in an AWS account using CDK
+
+
+
+
+
+
+
+
+______________________________
+
+
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
