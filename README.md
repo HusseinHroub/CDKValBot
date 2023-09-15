@@ -1,6 +1,6 @@
 # Welcome to Val CDK Java project!
 
-The purpose of this project is to track Val player stats for huge scale
+The purpose of this project is to track Val player stats for huge scale with Discord integration
 
 This is meant to be executed in an AWS account using CDK
 
